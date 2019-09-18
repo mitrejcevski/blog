@@ -1,4 +1,37 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Android Development"
+title = "Android Academy"
 theme = "ananke"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = "/images/jovche/jovche.png"
+  description = "Welcome to Android Academy"
+  twitter = "https://twitter.com/jovchem"
+  github = "https://github.com/mitrejcevski"
+  youtube = "https://www.youtube.com/channel/UC71omjio31Esx7LytaZ2ytA"
+  medium = "https://medium.com/@jovmit"
+  linkedin = "https://www.linkedin.com/in/jovmit/"
+  instagram = "https://www.instagram.com/jovchem/"
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/theme/side_background.jpg"
+  recent_posts_number = 5
+
+[menu]
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  title = "About section"
+  url = "/about/"
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Posts"
+  title = "Blog section"
+  url = "/posts/"
