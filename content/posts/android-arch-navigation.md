@@ -1,7 +1,6 @@
 ---
 title: "Android Navigation Arch Component — A Curious Investigation"
 date: 2018-05-23T07:19:26+02:00
-draft: true
 ---
 
 {{< figure src="/images/arch_navigation/navigation.jpeg" caption="https://www.pexels.com/" >}}
