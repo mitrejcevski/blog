@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://jovmit.io/"
 languageCode = "en-us"
-title = "Android Academy"
+title = "Jovche Mitrejchevski"
 theme = "ananke"
 
 [sitemap]
