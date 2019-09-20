@@ -2,6 +2,8 @@ baseURL = "https://jovmit.io"
 languageCode = "en-us"
 title = "Jovche Mitrejchevski"
 theme = "ananke"
+googleAnalytics = "UA-148368240-1"
+disqusShortname = "jovmit"
 
 [sitemap]
   changefreq = "monthly"
@@ -20,6 +22,8 @@ theme = "ananke"
   background_color_class = "bg-black"
   featured_image = "/images/theme/side_background.jpg"
   recent_posts_number = 5
+  commentoEnable = true
+  show_reading_time = true
 
 [menu]
 
