@@ -3,7 +3,7 @@ title: "Android Navigation Arch Component — A Curious Investigation"
 date: 2018-05-23T07:19:26+02:00
 ---
 
-{{< figure src="/images/arch_navigation/navigation.jpeg" caption="https://www.pexels.com/" >}}
+{{< imgpreview src="/images/arch_navigation/navigation.jpeg" caption="https://www.pexels.com/" >}}
 
 ## About
 On the Google IO 2018 event, there was an announcement of JetPack — a set of libraries to help and boost the Android development. These libraries are bringing the development of the essential parts of an application to a completely new level. By essential parts I mean things like handling configuration change, persisting data, executing operations in the background and so on. Some of those libraries were announced at Google IO 2017, and by now are having a stable release, and some of them are completely new. One of the new libraries is the Navigation.
@@ -21,7 +21,7 @@ Fair enough, the arguments that [Ian Lake](https://twitter.com/ianhlake) points 
 ## Getting Started
 I would highly recommend the official guide for the new Navigation component, as well as its documentation to get rolling with the implementation.
 
-{{< figure src="https://developer.android.com/images/topic/libraries/architecture/navigation-graph_2x-callouts.png" link="https://developer.android.com/topic/libraries/architecture/navigation/navigation-implementing" caption="Get started with the Navigation component" >}}
+{{< imgpreview src="https://developer.android.com/images/topic/libraries/architecture/navigation-graph_2x-callouts.png" link="https://developer.android.com/topic/libraries/architecture/navigation/navigation-implementing" caption="Get started with the Navigation component" >}}
 
 I’ve created a [simple playground project](https://github.com/mitrejcevski/jetpack-playground) where I was trying various things with the Navigation component. Keep in mind that I am using the latest version of [Android Studio](https://developer.android.com/studio/preview/) from the Canary Channel.
 
@@ -35,15 +35,15 @@ implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha01'
 ## Define Navigation Graph
 In order to start with the Navigation component, we have to first define the navigation graph. The navigation graph is nothing but an XML file that is getting placed in the `navigation` folder in the `resources`. With a right-click on the **res** folder, we choose **New -> Android Resource File**
 
-{{< figure src="/images/arch_navigation/create-new-resource-file.png" caption="Create new resource" >}}
+{{< imgpreview src="/images/arch_navigation/create-new-resource-file.png" caption="Create new resource" >}}
 
 Then, in the **New Resource File** window, we specify a name for the file, followed by choosing **Navigation** as **Resource type**
 
-{{< figure src="/images/arch_navigation/new-resource-file-popup.png" caption="Define new navigation graph resource file" >}}
+{{< imgpreview src="/images/arch_navigation/new-resource-file-popup.png" caption="Define new navigation graph resource file" >}}
 
 Once done, the newly defined navigation graph is getting opened with the navigation editor in the studio. By using the latest [Android Studio](https://developer.android.com/studio/preview/) we are able to see this XML file in **design** preview as well as edit the XML as **text**. The same that we could do with the layout files. The navigation editor provides an ability to wire the things up and configure the navigation in the desired way.
 
-{{< figure src="/images/arch_navigation/empty-navigation-graph.png" caption="Empty navigation graph in the navigation editor" >}}
+{{< imgpreview src="/images/arch_navigation/empty-navigation-graph.png" caption="Empty navigation graph in the navigation editor" >}}
 
 Next, there is a need for a host fragment to be defined. In the [example](https://github.com/mitrejcevski/jetpack-playground) I shared, we have an Activity that has a layout named `activity_main` where this host fragment is defined. In this layout, we also include a [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView), in order to investigate some interesting things how the new Navigation component works with it.
 
@@ -63,15 +63,15 @@ class MainActivity : AppCompatActivity() {
 
 The latter one is used to define which navigation graph from the `navigation` resources folder is going to be assigned to the `NavHostFragment`. Once we define that in the XML, we could get back to the navigation editor in the studio. As we can see, now it displays the host as expected:
 
-{{< figure src="/images/arch_navigation/nav-graph-host.png" caption="Host of navigation graph" >}}
+{{< imgpreview src="/images/arch_navigation/nav-graph-host.png" caption="Host of navigation graph" >}}
 
 Now we can go on and some destinations in the navigation graph, directly in the navigation editor
 
-{{< figure src="/images/arch_navigation/create-new-destination-window.png" caption="Create new destination window" >}}
+{{< imgpreview src="/images/arch_navigation/create-new-destination-window.png" caption="Create new destination window" >}}
 
 For our case, I defined 4 destinations. The first three to serve the [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView) we have in the `main_activity`, and the fourth one to be used as a detailed preview that will get opened after a click on an action. Here is how it looks in the navigation editor
 
-{{< figure src="/images/arch_navigation/navigation-editor-window.png" caption="Navigation editor" >}}
+{{< imgpreview src="/images/arch_navigation/navigation-editor-window.png" caption="Navigation editor" >}}
 
 Then, as mentioned before, to make this setup work with the [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView), we need a very little effort. As we can find out in the navigation graph, the items we defined in it are having `id` attributes
 
@@ -111,7 +111,7 @@ It’s interesting that optionally, we could pass in that function a `DrawerLayo
 ## Guideline Updates
 If you check out and try out the [example I shared](https://github.com/mitrejcevski/jetpack-playground), you will notice a very weird thing. Mainly, the app opens the home destination as we have set it before, but if you try to open some of the other sections on the bottom navigation, it will display its fragment, it will update the title on the [Toolbar](https://developer.android.com/reference/android/widget/Toolbar), but also it will add an up action on the toolbar. Now, this looks quite weird and initially, I thought that it is a bug. So I [reported it as an issue](https://issuetracker.google.com/issues/79671564), because, as of the **Bottom Navigation Guidelines**, navigating to another section in the [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView) and then clicking the system back button should not get the user back to the initial screen, but rather close the screen. So, navigating to a separate section should not add the new section to the stack, and clicking back pop it from the stack. But in my case, the result was unexpected:
 
-{{< figure src="/images/arch_navigation/nav-back-button.svg" >}}
+{{< imgpreview src="/images/arch_navigation/nav-back-button.svg" >}}
 
 Surprisingly enough, as we can see from the response from the Google Devs in the [reported issue](https://issuetracker.google.com/issues/79671564), the guidelines for the [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView) are now updated and [here is how the new navigation guidelines look like](https://developer.android.com/topic/libraries/architecture/navigation/navigation-principles).
 
@@ -124,11 +124,11 @@ As we can see in this code snippet, especially on the line 11, the Navigation li
 ## Transitions out of box
 Let’s get back to the navigation editor and take a look at the `notifications` and the `notificationDetails`
 
-{{< figure src="/images/arch_navigation/navigation_preview_window.png" caption="Navigation preview" >}}
+{{< imgpreview src="/images/arch_navigation/navigation_preview_window.png" caption="Navigation preview" >}}
 
 The arrow that is connecting both fragments is called an action and it essentially defines a way to navigate from the first to the second fragment. By clicking on the action (which will highlight it), we are allowed to edit its attributes in the right-hand side panel
 
-{{< figure src="/images/arch_navigation/action-attributes-editing-panel.png" caption="Attributes panel" >}}
+{{< imgpreview src="/images/arch_navigation/action-attributes-editing-panel.png" caption="Attributes panel" >}}
 
 As we can see here, the action has an id itself, and that is a very important thing (will see later why). Also, there are the enter and exit transition attributes. We could use here some of the predefined transitions, as well as our own transitions defined in the `anim` folder in the resources. Also, we could set a pop destination, so when the user closes this screen, the navigation will bring him to the desired screen without any mess with the fragment management from our side. The action can define default argument types and their values as well. From the XML preview, it looks like this
 

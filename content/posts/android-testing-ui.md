@@ -2,7 +2,7 @@
 title: "Testing Android UI with Pleasure"
 date: 2018-01-28T07:19:48+02:00
 ---
-{{< figure src="/images/ui_testing/espresso.png" >}}
+{{< imgpreview src="/images/ui_testing/espresso.png" caption="developer.android.com" >}}
 
 ## Intro
 Although it should be very clear by now, testing is a very important part of the software development. Tests are, in a way, a construction around the software, which provides confidence for altering its structure (mostly to improve it) while being sure the behaviour stays the same.
@@ -14,7 +14,7 @@ Thinking about that, the test should make sure the UI acts properly. For a given
 ## Details
 For the purposes of this article, I’ve created a [simple demo](https://github.com/mitrejcevski/ui-testing) that would help sorting out the ideas and the approach this article describes. *The demo is a login screen that shows error in case the username or the password is empty, or the auth is incorrect, otherwise it would open the main screen*. In order to make it as simple as possible, I decided to use only espresso, and no other 3rd party libraries. The project has 2 flavours **mock** and **prod**, and there in an implementation of the data source in each of them. The **prod** flavor has an implementation that does the real work, and the **mock** flavour has an implementation that provides the test-doubles. That is the key point in this approach. Since we know exactly what we could expect from the backend for a given input, we could mock that data and return back towards the UI instantly, instead of making any actual calls. So the **mock** would be used in order to run the UI tests, and the **prod** for everything else (like unit tests, or making release builds). As mentioned before, instead of adding flavours, Dagger would have done a great job too, but the idea is to avoid any additional setups, and get to the point in a very simple way. Let’s take a closer look:
 
-{{< figure src="/images/ui_testing/login_home.svg" caption="The login and the main screen" >}}
+{{< imgpreview src="/images/ui_testing/login_home.svg" caption="The login and the main screen" >}}
 
 Initially, the app opens the login screen. As described before, if the username or the password is empty, the screen should show an error. Also, we need to have tests that will make sure for given incorrect auth an error is being shown, and for given correct auth, the main screen is open. Here is the test case:
 

@@ -1,0 +1,15 @@
+.centeredDiv {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.imageRoundedCorners {
+  border-radius: 8px;
+  width: 100%
+}
+
+.imageCaption {
+  font-size: 14px;
+  font-family: inherit;
+  font-style: italic;
+}
