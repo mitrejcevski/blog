@@ -1,5 +1,5 @@
 ---
-title: "Testing Android UI with Pleasure"
+title: "Testing Android UI with pleasure"
 date: 2018-01-28T07:19:48+02:00
 ---
 {{< imgpreview src="/images/ui_testing/espresso.png" caption="developer.android.com" >}}

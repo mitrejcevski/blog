@@ -1,5 +1,5 @@
 ---
-title: "Outside in TDD on Android"
+title: "Outside-In TDD on Android"
 date: 2019-01-18T17:49:54+02:00
 ---
 

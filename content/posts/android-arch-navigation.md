@@ -1,5 +1,5 @@
 ---
-title: "Android Navigation Arch Component — A Curious Investigation"
+title: "Android Navigation arch component — A curious investigation"
 date: 2018-05-23T07:19:26+02:00
 ---
 

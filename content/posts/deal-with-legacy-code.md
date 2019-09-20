@@ -1,5 +1,5 @@
 ---
-title: "Deal With Legacy Code"
+title: "Dealing with legacy code"
 date: 2019-09-20T14:27:01+02:00
 draft: true
 ---
