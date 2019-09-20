@@ -22,7 +22,6 @@ disqusShortname = "jovmit"
   background_color_class = "bg-black"
   featured_image = "/images/theme/side_background.jpg"
   recent_posts_number = 5
-  commentoEnable = true
   show_reading_time = true
 
 [menu]
