@@ -28,13 +28,19 @@ disqusShortname = "jovmit"
 [menu]
 
 [[menu.main]]
-  identifier = "about"
-  name = "About"
-  title = "About section"
-  url = "/about/"
-
-[[menu.main]]
   identifier = "blog"
   name = "Posts"
   title = "Blog section"
   url = "/posts/"
+
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About section"
+    url = "/about/"
+
+[[menu.main]]
+  identifier = "tips"
+  name = "Tips"
+  title = "Tips and tricks section"
+  url = "/tips/"
