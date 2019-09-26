@@ -8,4 +8,4 @@ featured_image: '/images/theme/side_background.jpg'
 Android | Android Dev | Software Craftsmanship | Clean Code | XP | TDD | Devternity
 
 #### Willing to get in touch?
-Please feel free to reach out and say hi: [@jovchem](https://twitter.com/jovchem)
+Please feel free to reach out and say hi [@jovchem](https://twitter.com/jovchem)
