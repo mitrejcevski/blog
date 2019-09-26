@@ -80,3 +80,5 @@ It's important to note that when typing while the cursor is at specific `$EXPR$`
 Recently I've discovered there is an [open source repository](https://github.com/pranaypatel512/AndroidLiveTemplates) created by [Pranay Patel](https://twitter.com/pranaypatel_) with a bunch of cool live templates ready to be used. This repository is welcoming pull requests so anyone can contribute and add some more live templates.
 
 That's all for now, hope you find this useful! Feel free to [follow me on Twitter](https://twitter.com/jovchem) so you won't miss new content.
+
+{{< twitterfollow account="jovchem">}}
