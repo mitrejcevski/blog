@@ -68,11 +68,11 @@ Let's see how does it look like. Open any Kotlin class file (because that's the 
 
 {{< imgpreview src="/images/live_templates/live_templates_usage_hint.png" caption="Use live template" >}}
 
-As we can see, Android Studio pops up a little window where we can choose between the available templates. Just because on my side I have set a live template for JUnit4 test function beforehand, I can see both options available and I can choose which one I would like to use. Just by pressing ⏎ *(Enter)* or ⇥ *(Tab)* Android Studio will insert the selected template in the editor, and it will put the cursor at the first `$EXPR$` variable from the template (in this case the function name).
+As we can see, Android Studio pops up a little window where we can choose between the available templates. Just because on my side I have set a live template for JUnit4 test function beforehand, I can see both options available and I can choose which one I would like to use. Just by pressing {{< keystroke value="⏎" >}} *(Enter)* or {{< keystroke value="⇥" >}} *(Tab)* Android Studio will insert the selected template in the editor, and it will put the cursor at the first `$EXPR$` variable from the template (in this case the function name).
 
 {{< imgpreview src="/images/live_templates/live_templates_template_inserted.png" caption="Live template inserted" >}}
 
-Once we are done typing the name, we can press ⏎ or ⇥ again to jump to the next `$EXPR$` variable. Each ⏎ or ⇥ jumps to the next `$EXPR$` variable, and ⇧⇥ *(Shift + Tab)* jumps to the previous.
+Once we are done typing the name, we can press {{< keystroke value="⏎" >}} or {{< keystroke value="⇥" >}} again to jump to the next `$EXPR$` variable. Each {{< keystroke value="⏎" >}} or {{< keystroke value="⇥" >}} jumps to the next `$EXPR$` variable, and {{< keystroke value="⇧⇥" >}} *(Shift + Tab)* jumps to the previous.
 
 It's important to note that when typing while the cursor is at specific `$EXPR$` variable, the typed text will appear at all of the variables with the very same name. In our example, we have 3 variables in total, and they all differ by adding a number at the end of them: `$EXPR$`, `$EXPR1$` and `$EXPR2$`. The actual numbers are not used as an order for the next/previous jump, rather, to differentiate them.
 
