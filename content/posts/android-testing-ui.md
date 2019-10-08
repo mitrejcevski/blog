@@ -1,8 +1,8 @@
 ---
 title: "Testing Android UI with pleasure"
 date: 2018-01-28T07:19:48+02:00
+featured_image: "/images/ui_testing/espresso.png"
 ---
-{{< imgpreview src="/images/ui_testing/espresso.png" caption="developer.android.com" >}}
 
 ## Intro
 Although it should be very clear by now, testing is a very important part of the software development. Tests are, in a way, a construction around the software, which provides confidence for altering its structure (mostly to improve it) while being sure the behaviour stays the same.

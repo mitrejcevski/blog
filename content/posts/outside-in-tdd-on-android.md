@@ -1,5 +1,6 @@
 ---
 title: "Outside-In TDD on Android"
+featured_image: "/images/outside_in/double_loop_of_tdd.png"
 date: 2019-01-18T17:49:54+02:00
 ---
 

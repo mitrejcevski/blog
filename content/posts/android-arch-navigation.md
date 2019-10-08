@@ -1,9 +1,8 @@
 ---
 title: "Android Navigation arch component — A curious investigation"
 date: 2018-05-23T07:19:26+02:00
+featured_image: "/images/arch_navigation/navigation.jpeg"
 ---
-
-{{< imgpreview src="/images/arch_navigation/navigation.jpeg" caption="https://www.pexels.com/" >}}
 
 ## About
 On the Google IO 2018 event, there was an announcement of JetPack — a set of libraries to help and boost the Android development. These libraries are bringing the development of the essential parts of an application to a completely new level. By essential parts I mean things like handling configuration change, persisting data, executing operations in the background and so on. Some of those libraries were announced at Google IO 2017, and by now are having a stable release, and some of them are completely new. One of the new libraries is the Navigation.
