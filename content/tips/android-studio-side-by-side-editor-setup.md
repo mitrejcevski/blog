@@ -1,6 +1,6 @@
 ---
 title: "Android Studio/IntelliJ Idea side by side working setup"
-date: 2019-10-11T10:00:00+02:00
+date: 2019-10-11T11:00:00+02:00
 ---
 
 The [way I prefer to work](https://www.youtube.com/user/mitrejcevski/videos) when I use Android Studio or IntelliJ Idea is splitting the production code and the related tests side-by-side. In this article I'd like to describe the setup and the shortcuts I use, so someone might find it useful as well.
