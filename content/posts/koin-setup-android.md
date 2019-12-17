@@ -2,7 +2,6 @@
 title: "Setting up Koin for Android UI testing"
 date: 2019-12-14T09:11:33+01:00
 featured_image: "/images/koin/insert_koin.jpg"
-draft: true
 ---
 
 {{< youtube _BdgqavMj8o >}}
