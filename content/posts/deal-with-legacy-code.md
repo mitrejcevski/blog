@@ -39,10 +39,23 @@ The code coverage tool comes to great help when refactoring legacy code. It play
 The defect injection is a technique that we use to make sure a particular test is failing for the right reason. As mentioned previously, a covered line of code is not the same as preserved behavior. Usually, the test that makes sure a block of code is covered is different than the test that checks its behavior. It is not impossible, but normally, those are separate tests. So, to prove a behavior is remaining the same, we can inject a defect in a block of code that we are exercising, so that the test that penetrates that code will fail. Injecting a defect can be a line of code being commented out or a small change that would make the test fail. Then we would observe if the failure of the test is caused by the defect we have injected. Once we have the confidence that the behavior is not changed, we can undo the injected defect and continue.
 
 #### Test Data Builders
+A good test is the well-focused one, the one that clearly describes its intention and involves only the relevant details. Very often, we need to involve data in a test, thus, we might end up initializing and arranging not particularly relevant data structures into its setup. In those situations, we can make use of a data builder - a helper used in the tests that leverage the builder pattern. Let's take a look at a concrete example. Here is a DTO class with a handful of properties:
+
+{{< gist mitrejcevski eff3e55a81f6551acd13ea2a0bd132c7 >}}
+
+and a test where we are checking the result of a search call:
+
+{{< gist mitrejcevski 6ef41a6f04090e338305d59d2e6bf4a8>}}
+
+In the test setup, we are initializing a new user object, and to do that, besides the value for the `userId`, we have to provide values for its `firstName`, `lastName`, `age` and `location`. However, in that test, all the values except the `userId` are **completely irrelevant**. By using data builder, we can significantly improve the readability and the intention of the test:
+
+{{< gist mitrejcevski 380433c58d9688d877db6137952b5fc6 >}}
+
+Now, we have eliminated the irrelevant details from the test, so we ended up with a more focused test.
 
 #### Seams
 
 #### Subclass to Test
 
-#### Conclusion
+## Conclusion
 Improving legacy code is not a trivial task and it always takes a lot of effort an energy.
