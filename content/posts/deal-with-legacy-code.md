@@ -1,6 +1,6 @@
 ---
 title: "Refactoring Legacy Code"
-date: 2020-01-10T14:27:01+02:00
+date: 2020-01-23T10:00:00+02:00
 draft: true
 ---
 
@@ -74,7 +74,11 @@ Once we have created the seam, in the tests, we can easily create a **testing su
 {{< gist mitrejcevski 1295abb3ee3a602adc1ea35ea7a12697 >}}
 
 #### Complexity
-
+When dealing with legacy code, we are trying to reduce the complexity of complicated software. During that process, it is very natural to get that complexity increased at the beginning, and simplified at the end. As we've seen in the example above, depending on the language, we might end up introducing undesired changes. But since we know that eventually, we will get to an exceedingly better place, it's worth to make those considerations.
 
 ## Conclusion
-Improving legacy code is not a trivial task and it always takes a lot of effort an energy. It's very crucial to have a good arsenal of tools available to fight against it, and to know how to use them properly. Practicing is important, the more we use them the more confident we become and we build experience that helps us pick the right tool for particular case faster.
+Improving legacy code is not a trivial task, and it always takes a lot of effort and energy. It's very crucial to have a good arsenal of tools available to fight against it and to know how to use those tools properly. Getting confident to use them involves a lot of practice, routine, and discipline. The more we use those tools, the more confident we become, and that helps us pick the right tool for a particular case easier.
+
+I hope you find this article, and the screencast videos useful, and you learned something new that you could apply at your daily job. Feel free to [follow me on Twitter](https://twitter.com/jovchem), so you will stay up to date with new content.
+
+{{< twitterfollow account="jovchem">}}
