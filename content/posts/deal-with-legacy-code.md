@@ -47,15 +47,33 @@ and a test where we are checking the result of a search call:
 
 {{< gist mitrejcevski 6ef41a6f04090e338305d59d2e6bf4a8>}}
 
-In the test setup, we are initializing a new user object, and to do that, besides the value for the `userId`, we have to provide values for its `firstName`, `lastName`, `age` and `location`. However, in that test, all the values except the `userId` are **completely irrelevant**. By using data builder, we can significantly improve the readability and the intention of the test:
+In the test setup, we are initializing a new user object, and to do that, besides the value for the `userId` we have to provide values for the `firstName`, `lastName`, `age` and `location`. However, all the values in that test except the `userId` are **completely irrelevant**. By using a data builder, we can significantly improve the readability and the intention of the test.
 
 {{< gist mitrejcevski 380433c58d9688d877db6137952b5fc6 >}}
 
-Now, we have eliminated the irrelevant details from the test, so we ended up with a more focused test.
+Now, we have dropped the irrelevant details from the test, and we ended up with a more focused test.
 
-#### Seams
+#### Seam
+When refactoring legacy code, often there are parts of the code involving static calls, calls that are expensive to be made (like querying database), or usage of constant fields. Putting those parts under test harness is not a straight forward task. By extracting those calls into another function, we are opening an ability to replace the real call with a call or a value we need in the test harness. That newly extracted function is called **seam**.
 
 #### Subclass to Test
+To make use of the seam, we need to create a **subclass** and override the function, so that it will call or return whatever we need in the particular test. This subclass is relevant only in the tests, and we are calling it **subclass to test** or a **testing subclass**. Let's take a look at a concrete example. Here is a piece of code that we want to put under a test harness:
+
+{{< gist mitrejcevski cbe0b4a1ecae6619753f13be575620b7 >}}
+
+There is a static call to find trips `TripsDao.findTripsFor(userId)`, so if we call this function in a test, it might try to make a real query to the database, which in turn will take a lot of time, it might throw an exception, but there is no way for us to know the exact return result. Furthermore, making real calls to a database from a test will lead to flaky tests and might corrupt the database records. To get over that problem, we can create a seam, so that we will allow ourselves to put this code under test harness easily:
+
+{{< gist mitrejcevski 9e90b88381003d81c8af61b8106f21e1 >}}
+
+It's essential to note that by creating this seam, we are not changing the behavior of the code. We only delegate the call to the new function we created.
+
+In languages like [Kotlin]("https://kotlinlang.org/"), where the classes and functions are implicitly `final`, we need to make them `open` to be able to override them, but more about that in the [Complexity](#complexity) section.
+
+Once we have created the seam, in the tests, we can easily create a **testing subclass** where we can override the function and return a result that we can control.
+
+{{< gist mitrejcevski 1295abb3ee3a602adc1ea35ea7a12697 >}}
+
+#### Complexity
 
 ## Conclusion
-Improving legacy code is not a trivial task and it always takes a lot of effort an energy.
+Improving legacy code is not a trivial task and it always takes a lot of effort an energy. It's very crucial to have a good arsenal of tools available to fight against it, and to know how to use them properly. Practicing is important, the more we use them the more confident we become and we build experience that helps us pick the right tool for particular case faster.
