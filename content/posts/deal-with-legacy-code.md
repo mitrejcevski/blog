@@ -1,7 +1,7 @@
 ---
 title: "Refactoring Legacy Code"
+featured_image: "/images/refactoring/craftsman.jpg"
 date: 2020-01-23T10:00:00+02:00
-draft: true
 ---
 
 ## Intro
