@@ -1,6 +1,7 @@
 ---
 title: "Simple Design - Separating responsibilities"
 date: 2020-05-21T08:46:04+02:00
+featured_image: "/images/simple_design/simple-design.jpg"
 draft: true
 ---
 
