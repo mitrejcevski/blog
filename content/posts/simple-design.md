@@ -1,8 +1,7 @@
 ---
-title: "Simple Design - Separating responsibilities"
-date: 2020-05-21T08:46:04+02:00
+title: "Improving Design - Separating responsibilities"
+date: 2020-05-25T08:46:04+02:00
 featured_image: "/images/simple_design/simple-design.jpg"
-draft: true
 ---
 
 Let's take a look at the following piece of code:
@@ -200,5 +199,16 @@ Early on, we stated that the static call to the external system (in the first ve
 
 All we need from the actual test for the `Searcher` is to verify its behavior, and to achieve it - we need data. We don't need to make calls to any external systems. We can set up the required data in memory and use it in the test. Given the `Inventory` abstraction that we came up with, setting up an in-memory implementation for the testing purposes is pretty straightforward.
 
+#### Screecast
+Here is a demonstration videos where we can see the step-by-step refactoring to apply the improvements to the initial code. The first part works on preparation for the refactoring:
+
+{{< youtube _pTEx9DToGo >}}
+
+and in the second part we can see the actual refactoring and improving the design:
+
+{{< youtube JM8PEgeBQ04 >}}
+
 #### Wrap up
 The key for keeping the design simple is always in small things. It does take a little more time to keep it nice, but that's a really valuable long-term investment. It's almost like cutting a loan: we pay it monthly - we won't notice it. We stop paying for a while - we end up in a though situation. We need to be persistent in paying attention to small things and doing them right. There are situations when it feels like we can skip over a problem because it's easy to come back and change when needed, but usually that doesn't happen, so those small places pile up overtime into a bigger mess way more expensive to fix.
+
+{{< twitterfollow account="jovchem">}}
