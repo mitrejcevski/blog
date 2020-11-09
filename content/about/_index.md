@@ -5,7 +5,7 @@ featured_image: '/images/theme/side_background.jpg'
 ---
 #### *A job is something you do. A profession is part of who you are.*
 
-Android | Android Dev | Software Craftsmanship | Clean Code | XP | TDD | Devternity
+Android Dev | Software Craftsman | Clean Code | TDD | Devternity
 
-#### Willing to get in touch?
+#### Lets be friends!
 Please feel free to reach out and say hi [@jovchem](https://twitter.com/jovchem)

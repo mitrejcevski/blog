@@ -5,6 +5,9 @@ theme = "ananke"
 googleAnalytics = "UA-148368240-1"
 disqusShortname = "jovmit"
 
+[taxonomies]
+  tag = "tags"
+
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
@@ -12,7 +15,7 @@ disqusShortname = "jovmit"
 
 [params]
   favicon = "/images/jovche/jovche.png"
-  description = "Welcome to Android Academy"
+  description = "Welcome to TDD on Android Academy"
   twitter = "https://twitter.com/jovchem"
   github = "https://github.com/mitrejcevski"
   youtube = "https://www.youtube.com/channel/UC71omjio31Esx7LytaZ2ytA"
