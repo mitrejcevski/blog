@@ -1,7 +1,9 @@
 ---
-title: "Android Navigation arch component — A curious investigation"
+title: "Android Navigation Arch Component"
+description: "A Curious Investigation"
 date: 2018-05-23T07:19:26+02:00
 featured_image: "/images/arch_navigation/navigation.jpeg"
+tags: ["Android", "Jetpack", "Navigation"]
 ---
 
 ## About

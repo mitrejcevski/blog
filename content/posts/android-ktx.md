@@ -2,6 +2,7 @@
 title: "Android KTX"
 date: 2018-06-29T10:25:45+02:00
 featured_image: "/images/ktx/android_ktx.png"
+tags: ["Android"]
 ---
 ## Intro
 [Android KTX](https://developer.android.com/kotlin/ktx) is an open source library or set of functionalities designed to make the Android development with Kotlin even more pleasant. The abbreviation KTX stands for Kotlin Extensions, so this library is basically a set of extension functions, extension properties and other top-level functions. In this article, we take a look at what's inside this library and how we can take advantage of it. This library's goal is not to add new features to the existing Android APIs, but rather make those APIs easier to use by leveraging the features of the Kotlin language.

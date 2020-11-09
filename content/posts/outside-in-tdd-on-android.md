@@ -2,9 +2,10 @@
 title: "On Test-Driven Development"
 featured_image: "/images/outside_in/double_loop_of_tdd.png"
 date: 2019-01-18T17:49:54+02:00
+tags: ["TDD", "Outside-In", "Sequence Diagram"]
 ---
 
-{{< youtube AHEJGWY1B0s >}}
+{{< youtube "playlist?list=PLqew6vQ7CzHJ6YC8HUx3k1VINanVr56_d" >}}
 
 ## A quick overview in our industry
 I'm in the IT industry, particularly in Android for roughly 10 years now, and one thing I can tell with great confidence is that this industry moves incredibly fast. Looking back all these years, it's been an extraordinary evolution of the OS itself, as well as the community around it. However, sometimes it feels like our industry lacks a lot of good practices and discipline in the development process, a lack of professionalism. Why am I saying this? - During all these years I've witnessed developers, colleagues, and entire companies struggling to establish some good practices around the software development processes they were doing. While I was at the secondary school we were learning about algorithms and for the first time I got in touch with some programming languages. Then, I continued studying programming languages at university. Neither of them taught the students some sort of good practices and discipline. We learned how to use the languages, and how to construct small programs to solve *Fibonacci*, *Factorial*, *String manipulation* and so on, but we weren't taught what is expected from us as professionals and how important it would be for our potential future customers our professionalism. Probably part of the problem lays in the fact that our industry is quite young and the professors were not having the required experience and disciplines themselves. Likely, we are organizing ourselves into communities and we share and learn from each other, and as the time passes everything gets better and better.

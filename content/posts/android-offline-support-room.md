@@ -2,6 +2,7 @@
 title: "Add offline support using Room"
 date: 2017-11-23T07:20:04+02:00
 featured_image: "/images/offline_support/arch-components.png"
+tags: ["Android", "Database", "Room"]
 ---
 Recently, Google has announced the stable version of the [architecture components](https://developer.android.com/topic/libraries/architecture/index.html), which arguably were quite stable before getting to 1.0.0. This library contains 4 parts: [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel.html), [LiveData](https://developer.android.com/topic/libraries/architecture/livedata.html), [Room](https://developer.android.com/topic/libraries/architecture/room.html), and the [Paging Library](https://developer.android.com/topic/libraries/architecture/paging.html). This parts work great together because as one may assume — they are designed to do so. The architecture components could drastically influence and change the traditional way of developing Android apps, so they are potential game changer. This article is focused on the Room part of the architecture components, used for data persistence in order to enable the offline support of an app.
 

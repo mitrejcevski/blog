@@ -2,11 +2,12 @@
 title: "Refactoring Legacy Code"
 featured_image: "/images/refactoring/craftsman.jpg"
 date: 2020-01-23T10:00:00+02:00
+tags: ["TDD", "Refactoring"]
 ---
 
 ## Intro
 
-{{< youtube 1ap11RbVGik >}}
+{{< youtube "playlist?list=PLqew6vQ7CzHI4gR0u3t7-F_suq8W044us" >}}
 
 Quite often in software development, we come to a point where we have to alter some code, whether to make it easier to read and understand or to add a new feature.
 

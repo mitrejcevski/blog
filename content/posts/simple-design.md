@@ -2,6 +2,7 @@
 title: "Improving Design - Separating responsibilities"
 date: 2020-05-25T08:46:04+02:00
 featured_image: "/images/simple_design/simple-design.jpg"
+tags: ["TDD", "Refactoring"]
 ---
 
 Let's take a look at the following piece of code:

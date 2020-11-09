@@ -2,6 +2,7 @@
 title: "Testing Android UI with pleasure"
 date: 2018-01-28T07:19:48+02:00
 featured_image: "/images/ui_testing/espresso.png"
+tags: ["Android", "Testing"]
 ---
 
 ## Intro
