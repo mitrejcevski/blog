@@ -26,7 +26,7 @@ disqusShortname = "jovmit"
   featured_image = "/images/theme/side_background.jpg"
   recent_posts_number = 5
   show_reading_time = true
-  custom_css = ["css/custom.css"]
+  custom_css = ["css/custom.css", "css/typography.css"]
 
 [menu]
 
