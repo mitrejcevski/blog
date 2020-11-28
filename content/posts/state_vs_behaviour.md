@@ -1,6 +1,6 @@
 ---
 title: "State vs. Behaviour Verification"
-date: 2020-11-28T10:00:00+02:00
+date: 2020-11-28T09:08:00+02:00
 tags: ["TDD", "Outside-In", "Acceptance Test", "Contract Tests"]
 ---
 {{< imgpreview src="/images/state_vs_behaviour/state_vs_behaviour.png">}}
