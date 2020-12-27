@@ -37,6 +37,12 @@ disqusShortname = "jovmit"
   url = "/posts/"
 
 [[menu.main]]
+  identifier = "tdd"
+  name = "TDD"
+  title = "Test-Driven Development Section"
+  url = "/tdd/"
+
+[[menu.main]]
     identifier = "about"
     name = "About"
     title = "About section"
