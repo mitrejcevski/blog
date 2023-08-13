@@ -1,6 +1,6 @@
 baseURL = "https://jovmit.io"
 languageCode = "en-us"
-title = "Jovche Mitrejchevski"
+title = "Jov Mit"
 theme = "ananke"
 googleAnalytics = "UA-148368240-1"
 disqusShortname = "jovmit"
@@ -14,7 +14,7 @@ disqusShortname = "jovmit"
   filename = "sitemap.xml"
 
 [params]
-  favicon = "/images/jovche/jovche.png"
+  favicon = "/images/jovche/jovmit.png"
   description = "Welcome to TDD on Android Academy"
   twitter = "https://twitter.com/jovchem"
   github = "https://github.com/mitrejcevski"
@@ -36,11 +36,11 @@ disqusShortname = "jovmit"
   title = "Blog section"
   url = "/posts/"
 
-[[menu.main]]
-  identifier = "tdd"
-  name = "TDD"
-  title = "Test-Driven Development Section"
-  url = "/tdd/"
+#[[menu.main]]
+#  identifier = "tdd"
+#  name = "TDD"
+#  title = "Test-Driven Development Section"
+#  url = "/tdd/"
 
 [[menu.main]]
     identifier = "about"

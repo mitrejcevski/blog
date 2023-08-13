@@ -15,7 +15,7 @@ The Navigation component is a new architecture component that is supposed to sim
 ## Why Navigation
 This is one of the first questions that come to mind when thinking about the Navigation component. As mentioned earlier, there was a well-known problem with the fragments and many developers were trying to avoid using fragments, or at least avoid working with the `FragmentManager`. Turns out, the need of such component lays in the fact that the activities are having some limitations too.
 
-{{< tweet 996426634541522944 >}}
+{{< tweet user="JorgeCastilloPr" id="996426634541522944" >}}
 
 Fair enough, the arguments that [Ian Lake](https://twitter.com/ianhlake) points out in this tweet are more than enough to think about making more robust and easy to use solution. The Navigation component is not only helping to sort out those problems mentioned by [Ian Lake](https://twitter.com/ianhlake) in that tweet, but it brings some awesome features like safe arguments passing, default arguments, handling deep links, automatic setup with side [NavigationView](https://developer.android.com/reference/android/support/design/widget/NavigationView) and with the [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView). Furthermore, there is also a visual editor where all these things can be wired up together, and the developers can take an overview of what’s going around and understand and manage the structure lot easier. Let’s take a closer look.
 
