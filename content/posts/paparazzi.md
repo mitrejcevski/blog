@@ -74,7 +74,7 @@ plugins {
 }
 {{< /highlight >}}
 
-That is enought for the setup. BTW, if you need help introducing version catalog in your app - comment below, and I'll write a tutorial.
+That is enough for the setup. BTW, if you need help introducing version catalog in your app - comment below, and I'll write a tutorial.
 
 ## Usage
 Now we can go ahead and start writing screenshot tests. If you are using `Previews` for your composables, you are already in a great position, because writing screenshot tests for your composables will be as effortless as a copy-paste.
@@ -103,9 +103,9 @@ fun loginScreenSnapshot() {
 }
 {{< /highlight >}}
 
-That's all! Now we can run this test. As we can examine form the example above, the API is super simple and easy to use. The rule allows us to create a configuration that suites us. All we need to do is wrap our composables in the `snapshot` lambda.
+That's all! Now we can run this test. As we can examine from the example above, the API is super simple and easy to use. The rule allows us to create a configuration that suits us. All we need to do is wrap our composables in the `snapshot` lambda.
 
-## Taking screeshots
+### Taking Screenshots
 Once we write a test and run it - it will pass. But it won't make a screenshot. It will pass because there was no screenshot created before. We need to generate screenshots from our tests initially, so then when we run the tests again, they will be checking against something.
 
 To create the screenshots, in the terminal, we need to run
@@ -119,8 +119,8 @@ Then, for subsequent runs, we can use
 ./gradlew module:verifyPaparazziDebug
 {{< /highlight >}} to check if we happened to break any of the composables.
 
-## Leveraging Previews
-A very good and common practice in a typical Jetpack Compose codebase is writing `previews` for the composables. It allows the developers to see what a composable is rendering and how the UI it spits out looks like. When that is the case, writing the Paparazzi tests boils down to copy-pasting the preview into the `paparazzi.snapshot {}` lambda.
+### Leveraging Previews
+A very good and common practice in a typical Jetpack Compose codebase is writing `previews` for the composables. It allows us and the other developers to see what a composable is rendering, and how the UI it spits out looks like. When that is the case, writing the Paparazzi tests boils down to copy-pasting the preview into the `paparazzi.snapshot {}` lambda.
 
 ## Next Steps
 If you are looking into more resources to learn Jetpack Compose and Android Development, [join my free training here](https://www.skool.com/android-devs?invite=e7235a1900bf49cb89c043e0fb9753d3).
