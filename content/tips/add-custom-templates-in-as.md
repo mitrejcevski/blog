@@ -3,6 +3,8 @@ title: "Add custom live templates in Android Studio"
 date: 2019-09-25T14:15:25+02:00
 ---
 
+{{< youtube tFkMYnm-FxA >}}
+
 ## What is a custom live template
 In Android Studio, there is a concept of inserting a block of any textual content as a template wherever it is required, just by typing a keyword. By using live templates, we can insert frequently-used constructions into our code.
 

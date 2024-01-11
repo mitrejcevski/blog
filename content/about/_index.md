@@ -1,6 +1,6 @@
 ---
 title: "Hi, I'm Jov!"
-description: "I'm a software craftsman, currently focusing on Kotlin and Android. I help programmers start earning passive income out of their regular job."
+description: "I'm a software craftsman, currently focusing on Kotlin and Android. I help people become programmers & programmers start earning passive income out of their regular job."
 featured_image: '/images/theme/side_background.jpg'
 ---
 #### *A job is something you do. A profession is part of who you are.*
